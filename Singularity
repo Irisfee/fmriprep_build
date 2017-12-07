@@ -1,7 +1,7 @@
 # FMRIPREP from poldracklab
 
 BootStrap: docker
-From: poldracklab/fmriprep:1.0.0-rc13
+From: poldracklab/fmriprep:latest
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
@@ -10,9 +10,9 @@ From: poldracklab/fmriprep:1.0.0-rc13
 
 %labels
 Author zhifang.ye.fghm@gmail.com
-Build-date 3/12/2017
+Build-date 7/12/2017
 Vendor Ubuntu:Xenial
-Version 1.0.0-rc13
+Version 1.0.0
 
 %post
     #------------------------------------------------------------------------------
