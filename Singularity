@@ -30,3 +30,8 @@ Version 1.0.1
     # Add license
     #------------------------------------------------------------------------------
     echo "cHJpbnRmICJ6aGlmYW5nLnllLmZnaG1AZ21haWwuY29tXG4zMDgyN1xuICpDQWp0eWJDWTQwck1cbiBGUzl2ZU14OGdudXFRXG4iID4gL29wdC9mcmVlc3VyZmVyL2xpY2Vuc2UudHh0" | base64 -d | bash
+    #------------------------------------------------------------------------------
+    # Create local binding point for our HPC
+    #------------------------------------------------------------------------------
+    mkdir /seastor
+    mkdir /lustre
