@@ -7,7 +7,7 @@ From: poldracklab/fmriprep:latest
 Author zhifang.ye.fghm@gmail.com
 Build-date 2/1/2018
 Vendor Ubuntu:Xenial
-Version 1.0.1
+Version 1.0.2
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
