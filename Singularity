@@ -5,9 +5,9 @@ From: poldracklab/fmriprep:latest
 
 %labels
 Author zhifang.ye.fghm@gmail.com
-Build-date 17/4/2018
+Build-date 12/5/2018
 Vendor Ubuntu:Xenial
-Version 1.0.11
+Version 1.0.13
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
