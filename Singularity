@@ -5,9 +5,9 @@ From: poldracklab/fmriprep:latest
 
 %labels
 Author zhifang.ye.fghm@gmail.com
-Build-date 12/5/2018
+Build-date 16/5/2018
 Vendor Ubuntu:Xenial
-Version 1.0.13
+Version 1.0.14
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
@@ -16,11 +16,6 @@ Version 1.0.13
     export FS_LICENSE=/opt/freesurfer/license.txt
 
 %post
-    #------------------------------------------------------------------------------
-    # Fix possible permission issue
-    #------------------------------------------------------------------------------
-    chmod -R a+rX /usr/local/miniconda
-    chmod +x /usr/local/miniconda/bin/*
     #------------------------------------------------------------------------------
     # Change timezone to Shanghai
     #------------------------------------------------------------------------------
@@ -34,4 +29,5 @@ Version 1.0.13
     # Create local binding point for our HPC
     #------------------------------------------------------------------------------
     mkdir /seastor
+    mkdir /brain
     mkdir /lustre
