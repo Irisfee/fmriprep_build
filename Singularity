@@ -4,10 +4,10 @@ BootStrap: docker
 From: poldracklab/fmriprep:latest
 
 %labels
-Author zhifang.ye.fghm@gmail.com
-Build-date 9/26/2018
+Author zhifang.ye.fghm@gmail.com/yzhao17@uoregon.edu
+Build-date 2018.11.1
 Vendor Ubuntu:Xenial
-Version 1.1.7
+Version 1.1.8
 
 %runscript
     exec /usr/local/miniconda/bin/fmriprep "$@"
@@ -17,17 +17,7 @@ Version 1.1.7
 
 %post
     #------------------------------------------------------------------------------
-    # Change timezone to Shanghai
-    #------------------------------------------------------------------------------
-    ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-    dpkg-reconfigure --frontend noninteractive tzdata
-    #------------------------------------------------------------------------------
     # Add license
     #------------------------------------------------------------------------------
     echo "cHJpbnRmICJ6aGlmYW5nLnllLmZnaG1AZ21haWwuY29tXG4zMDgyN1xuICpDQWp0eWJDWTQwck1cbiBGUzl2ZU14OGdudXFRXG4iID4gL29wdC9mcmVlc3VyZmVyL2xpY2Vuc2UudHh0" | base64 -d | bash
-    #------------------------------------------------------------------------------
-    # Create local binding point for our HPC
-    #------------------------------------------------------------------------------
-    mkdir /seastor
-    mkdir /brain
-    mkdir /lustre
+
